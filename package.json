@@ -1,0 +1,19 @@
+{
+  "name": "auto-photobooth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "opencv4nodejs": "^4.10.1",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-blueflag": "^0.6.0",
+    "babel-register": "^6.26.0"
+  }
+}
