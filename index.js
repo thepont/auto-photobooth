@@ -11,25 +11,15 @@ from([{filename: './images/1.png'}, {filename: './images/2.png'}, {filename: './
         flatMap(ii => ii.bgrToGrayAsync()),
         distinctUntilChanged((ii,jj) => {
             let diff = ii.absdiff(jj);
-            let threshold = ii.threshold(80, 255, cv.THRESH_BINARY)
+            let threshold = diff.threshold(80, 255, cv.THRESH_BINARY);
             let difference = threshold.countNonZero();
             return difference < 1;
         })
     )
     .subscribe(async (ii) => {
-        console.log('IMAGE')
+        console.log('IMAGE');
         await cv.imwrite('./result.png', ii);
     });
 
 
 
-const distinctImages => ({percentChange, threshold}) = (obs) =>{
-    obs.
-        distinctUntilChanged((ii,jj) => {
-            let diff = ii.absdiff(jj);
-            let threshold = ii.threshold(threshold, 255, cv.THRESH_BINARY)
-            let difference = threshold.countNonZero();
-            let pixelTotal = ii.rows * ii.cols;
-            return difference < (pixelTotal * percentChange / 100);
-        })
-}

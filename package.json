@@ -7,6 +7,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "opencv4nodejs": "^4.10.1",
     "rxjs": "^6.3.3"
   },
@@ -14,6 +15,9 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-blueflag": "^0.6.0",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "eslint-config-blueflag": "^0.9.0",
+    "jasmine": "^3.3.0",
+    "jasmine-spec-reporter": "^4.2.1"
   }
 }

@@ -8,6 +8,6 @@ export function fileWatchSubject(path){
             eventType,
             filename
         });
-    })
+    });
     return fileWatchSubject;
 }
