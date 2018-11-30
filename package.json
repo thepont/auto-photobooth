@@ -8,6 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "app-module-path": "^2.2.0",
+    "backoff-rxjs": "^6.1.2",
+    "gphoto2": "^0.3.0",
     "opencv4nodejs": "^4.10.1",
     "rxjs": "^6.3.3"
   },

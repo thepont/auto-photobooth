@@ -844,6 +844,10 @@ babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
 
+backoff-rxjs@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/backoff-rxjs/-/backoff-rxjs-6.1.2.tgz#588537813662f41cb4be4f789058f07eddc5c300"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -1499,6 +1503,12 @@ globals@^11.1.0, globals@^11.7.0:
 globals@^9.18.0:
   version "9.18.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz#aa3896b3e69b487f17e31ed2143d69a8e30c2d8a"
+
+gphoto2@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gphoto2/-/gphoto2-0.3.0.tgz#96ace1bf3ee5859727b2a8f8ac50d705e711e298"
+  dependencies:
+    nan "^2.9.2"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "4.1.15"
