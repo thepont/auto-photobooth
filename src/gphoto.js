@@ -16,6 +16,7 @@ function takePicturePromise(camera){
             keep: false
         },
         (err, data) => {
+            console.log(typeof data);
             if(err)
                 console.log('I GOT AN ERROR', err);
             return err ? reject(err): resolve(data);
@@ -28,7 +29,7 @@ export function takePicture({camera}){
     return (obs) => {
         return obs.pipe(
             flatMap(() => {
-                return of(takePicturePromise(camera)).pipe(retryBackoff({initialInterval: 100}));
+                return from(takePicturePromise(camera)).pipe(retryBackoff({initialInterval: 100}));
             })
         );
     };

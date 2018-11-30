@@ -3,12 +3,13 @@
 const {distinctImages, matFromBufferObs, brgToGrayObs} = require ('./dist/imageProcessing');
 const {interval} = require('rxjs');
 const {takePicture, listCameras} = require('./dist/gphoto');
+const {filter} = require('rxjs/operators');
 listCameras().then((cameras) => {
     let [camera] = cameras;
     interval(5000)
         .pipe(
             takePicture({camera}),
-            // retry(100),
+            filter(ii => ii),
             matFromBufferObs(),
             brgToGrayObs(),
             distinctImages({percentChange:0.1})
